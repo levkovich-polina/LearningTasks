@@ -7,10 +7,15 @@ namespace _0101_ConsoleWriting
         static void Main(string[] args)
         {
             //Печатаем любой текст, какой только захотим
-            Console.WriteLine("Hello, world!");
-            Console.WriteLine("Приветик, =)");
+           Console.WriteLine("Приветик.");
+           Console.ReadLine();
+            Console.WriteLine("Привет. Как дела?");
+            Console.ReadLine();
+            Console.WriteLine("Все отлично) У тебя как?");
+            Console.ReadLine();
+            Console.WriteLine("У меня тоже все хорошо).");
 
-            Console.Read();
+            Console.ReadLine();
         }
     }
 }
