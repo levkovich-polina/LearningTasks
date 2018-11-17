@@ -8,27 +8,38 @@ namespace _0104_Question
         {
             //Пишем текст загадки
             Console.WriteLine("Отгадайте загадку:");
-            Console.WriteLine("Не ездок, а со шпорами,");
-            Console.WriteLine("Не будильник, а всех будит");
+            Console.WriteLine("2*2=?");
+        
 
             Console.Write("Ответ: ");
             //Пишем ответ на загадку
             var answer = Console.ReadLine();
 
             //Если мы написали, что ответ "петух"
-            if (answer == "петух")
+            if (answer == "3")
             {
                 //...то зелёным цветом пишем, что ответ верный!
                 Console.ForegroundColor = ConsoleColor.Green;
-                Console.WriteLine("Верно! Это петух!");
+                Console.WriteLine("вы экономный!");
             }
             else
             {
-                //...иначе ответ неверный, и красным цветом пишем об этом
-                Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine("Неправильно! Это петух");
+                if (answer == "4")
+                {
+                    Console.WriteLine("вы умный");
+                }
+                else
+                {
+                    if (answer == "5")
+                    {
+                        Console.WriteLine("вы щедрый");
+                     }
+                     else
+                     {  
+                       Console.WriteLine("вы красивый");
+                     }
+                 }
             }
-
             Console.Read();
         }
     }
