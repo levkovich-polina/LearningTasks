@@ -9,6 +9,7 @@ namespace _0301_LinearEquation
             //Напечатаем подсказку о том, что линейное уравнение имеет вид a*x + b = 0
             Console.WriteLine("Линейное уравнение - это уравнение вида 'a*x + b = 0'");
 
+            
             Console.WriteLine("Введите 'a'");
             //Просим ввести число 'a'
             var a = Convert.ToDouble(Console.ReadLine());
@@ -16,13 +17,24 @@ namespace _0301_LinearEquation
             Console.WriteLine("Введите 'b'");
             //Просим ввести число 'b'
             var b = Convert.ToDouble(Console.ReadLine());
-
-            //Решаем уравнение
-            var x = -b / a;
-
-            //Выводим решение на экран
-            Console.WriteLine($"Решение: x={x}");
-
+            if (a==0 && b==0)
+            {
+             Console.WriteLine("решений много");
+             }
+            else
+            {
+                if (a == 0 && b != 0)
+                {
+                    Console.WriteLine("решений нет");
+                }
+                else
+                {
+                    //Решаем уравнение
+                     var x = -b / a;
+                    //Выводим решение на экран
+                    Console.WriteLine("Решение: x={0}", x);
+                }
+            }
             //Для завершения програмы нужно будет нажать любую клавишу
             Console.Read();
         }
