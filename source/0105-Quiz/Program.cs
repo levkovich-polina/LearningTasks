@@ -11,7 +11,7 @@ namespace _0105_Quiz
             //Выводи варианты ответов на некоторые из вопросов
             //Если пользователь отвечает правильно, то напиши об этом зелёным цветом
             //Если неправильно, то красным
-
+            var rightAnswerCount = 0;
             Console.WriteLine("Какого цвета ёлка?");
             var answer1 = Console.ReadLine();
 
@@ -19,6 +19,7 @@ namespace _0105_Quiz
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Это правильный ответ, вы молодец!");
+                rightAnswerCount = rightAnswerCount + 1;
             }
             else
             {
@@ -35,6 +36,7 @@ namespace _0105_Quiz
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Это правильный ответ, вы молодец!");
+                rightAnswerCount = rightAnswerCount + 1;
             }
             else
             {
@@ -55,13 +57,18 @@ namespace _0105_Quiz
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Это правильный ответ, вы молодец!");
+                rightAnswerCount = rightAnswerCount + 1;
             }
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine("Это неправильный ответ. это Литий");
             }
+            var mark = rightAnswerCount + 2;
+            Console.WriteLine("ваша оценка {0}",mark);
             Console.ReadLine();
+
+
         }
     }
 }
