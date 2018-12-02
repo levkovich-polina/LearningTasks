@@ -12,44 +12,50 @@ namespace _0302_QuadraticEquation
             Console.WriteLine("Введите 'a'");
             //Просим ввести число 'a'
             var a = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Введите 'b'");
-            //Просим ввести число 'b'
-            var b = Convert.ToDouble(Console.ReadLine());
-
-            Console.WriteLine("Введите 'c'");
-            //Просим ввести число 'c'
-            var c = Convert.ToDouble(Console.ReadLine());
-
-            //Находим дискриминант (Дискриминант = b*b-4ac)
-            var discriminant = b * b - 4 * a * c;
-            Console.WriteLine($"Дискриминант={discriminant}");
-
-            //Если дикриминант меньше нуля, то действительных корней нет
-            if (discriminant < 0)
+            if (a == 0)
             {
-                //Выводим решение на экран
-                Console.WriteLine("Решение: Действительных корней нет");
+                Console.WriteLine("a не должно равнятся 0");
             }
-            //Если дикриминант равен нулю, то существует один действительный корень
-            else if (discriminant == 0)
-            {
-                //Находим корень
-                var x = -b / (2 * a);
-                //Выводим решение на экран
-                Console.WriteLine($"Решение: x={x}");
-            }
-            //В остальных случаях дискриминант больше нуля и существует два решения уравнения
             else
             {
-                //Находим корень
-                var x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
-                var x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
-                //Выводим решение на экран
-                Console.WriteLine($"Решение: x1={x1}, x2={x2}");
-            }
 
-            //Для завершения програмы нужно будет нажать любую клавишу
+                Console.WriteLine("Введите 'b'");
+                //Просим ввести число 'b'
+                var b = Convert.ToDouble(Console.ReadLine());
+
+                Console.WriteLine("Введите 'c'");
+                //Просим ввести число 'c'
+                var c = Convert.ToDouble(Console.ReadLine());
+
+                //Находим дискриминант (Дискриминант = b*b-4ac)
+                var discriminant = b * b - 4 * a * c;
+                Console.WriteLine("Дискриминант={0}", discriminant);
+
+                //Если дикриминант меньше нуля, то действительных корней нет
+                if (discriminant < 0)
+                {
+                    //Выводим решение на экран
+                    Console.WriteLine("Решение: Действительных корней нет");
+                }
+                //Если дикриминант равен нулю, то существует один действительный корень
+                else if (discriminant == 0)
+                {
+                    //Находим корень
+                    var x = -b / (2 * a);
+                    //Выводим решение на экран
+                    Console.WriteLine("Решение: x={0}", x);
+                }
+                //В остальных случаях дискриминант больше нуля и существует два решения уравнения
+                else
+                {
+                    //Находим корень
+                    var x1 = (-b + Math.Sqrt(discriminant)) / (2 * a);
+                    var x2 = (-b - Math.Sqrt(discriminant)) / (2 * a);
+                    //Выводим решение на экран
+                    Console.WriteLine("Решение: x1={0}, x2={1}", x1, x2);
+                }
+            }
+                //Для завершения програмы нужно будет нажать любую клавишу
             Console.Read();
         }
     }
